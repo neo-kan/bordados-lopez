@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bordados López - Vanguardia en Bordado Textil</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&amp;family=Space+Grotesk:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#05051a",
+                        accent: "#b8860b","bg-main": "#ffffff",
+                    },
+                    fontFamily: {
+                        sans: ["Plus Jakarta Sans", "sans-serif"],
+                        display: ["Space Grotesk", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .text-dynamic {
+                font-size: clamp(3rem, 10vw, 9rem);
+                line-height: 0.9;
+            }
+            .sticky-card {
+                position: sticky;
+                top: 100px;
+            }
+            .perspective-1000 {
+                perspective: 1000px;
+            }
+            .tilt-hover {
+                transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            .tilt-hover:hover {
+                transform: rotateX(5deg) rotateY(-5deg) scale(1.02);
+            }
+        }
+        :root {
+            --accent: #b8860b;
+        }
+        body {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-bg-main text-primary font-sans antialiased">
+<nav class="fixed w-full z-[100] mix-blend-difference py-8 px-6 lg:px-12 flex justify-between items-center text-white">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-bold tracking-tighter uppercase font-display">Bordados López.</span>
+</div>
+<div class="hidden md:flex items-center space-x-12 text-xs font-bold uppercase tracking-widest">
+<a class="hover:text-[var(--accent)] transition-colors" href="#servicios">Servicios</a>
+<a class="hover:text-[var(--accent)] transition-colors" href="#portfolio">Portafolio</a>
+<a class="hover:text-[var(--accent)] transition-colors" href="#contacto">Contacto</a>
+</div>
+</nav>
+<header class="relative min-h-screen flex flex-col justify-end px-6 lg:px-12 pb-20">
+<div class="absolute inset-0 z-[-1] overflow-hidden">
+<img alt="Hero background" class="w-full h-full object-cover opacity-20 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo1rgy_Q2ldCfTpufbtHrYowc8ity81eblPP1g7vVz9UgDEJCACTC-rZtBpcKKAVxiw2Icz834iYb1uhw1AGbN3gttADJrjxejo6kCl0uFFGPPsLt9gYKsClP3ERfw4aw1VJlT_KS2Qgbwc-h5T47BjEyokRNcd2aVj0s0GxvhC_gfhdxfe4MSs72qtCzUhB8NqI3BjAkjQryr3F3IzRF7HtMxvWbZ-vLzcSTRQLb3o_v9t2NDOWQoiOPImr-7bB6vr4MhD7DeTw8i"/>
+</div>
+<div class="max-w-[1400px]">
+<h1 class="text-dynamic font-display font-bold tracking-tighter uppercase mb-8">
+            Arte<br/>Digital &amp;<br/>Bordado.
+        </h1>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<p class="max-w-md text-lg font-light leading-relaxed">
+                Elevamos la identidad textil a través de técnica precisa y estética minimalista. Especialistas en personalización de alto impacto.
+            </p>
+<a class="inline-flex items-center justify-center bg-[var(--accent)] text-white w-40 h-40 rounded-full text-xs font-bold uppercase tracking-widest hover:scale-110 transition-transform duration-500 text-center leading-tight p-4" href="#servicios">
+                Explorar Servicios
+            </a>
+</div>
+</div>
+</header>
+<section class="py-32 px-6 lg:px-12 bg-primary text-white" id="servicios">
+<div class="max-w-7xl mx-auto">
+<div class="mb-32">
+<h2 class="text-6xl md:text-8xl font-display font-bold tracking-tighter uppercase opacity-20">Servicios</h2>
+</div>
+<div class="space-y-[30vh] pb-[20vh]">
+<div class="sticky-card bg-white text-primary p-8 lg:p-20 flex flex-col lg:flex-row gap-12 border border-white/10 shadow-2xl">
+<div class="lg:w-1/2">
+<span class="text-[var(--accent)] font-display text-5xl font-bold mb-8 block">01</span>
+<h3 class="text-4xl lg:text-6xl font-display font-bold tracking-tighter uppercase mb-6">Bordado<br/>Personalizado</h3>
+<p class="text-xl font-light mb-12 max-w-sm">Técnica de alta densidad para logotipos y diseños complejos sobre cualquier superficie textil.</p>
+<div class="flex items-center gap-6">
+<span class="text-2xl font-bold">Desde 50€</span>
+<button class="bg-primary text-white px-10 py-5 text-xs font-bold uppercase tracking-widest hover:bg-[var(--accent)] transition-colors">
+                            Reservar ahora
+                        </button>
+</div>
+</div>
+<div class="lg:w-1/2 h-[400px] overflow-hidden">
+<img alt="Bordado detalle" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa9FIqMHbQAYhI4Y3IuDjWRD7CyhRUTUFMhzV1eXX2LEGR6y5daUT4OMKLIAqupuN-tPuv3KstBtSHzitaQjryzWQU_ZZ4q8ICmtAZrPBgW9Ev8ZoEzexzMwpWxOnGDRGjimiyZcPuU1aPspT3htUxHQ9yNQTwY4oK8OWolPgOjmGgOu73XgsRljtlY2ARSAlLmiJVsXuzg-ti7wJ5hcw1Puig6lVkLEvtjP6JgVsaCg_Yygr_V57TIOlPRIyLVAUwpsehBoYVjqVR"/>
+</div>
+</div>
+<div class="sticky-card bg-white text-primary p-8 lg:p-20 flex flex-col lg:flex-row-reverse gap-12 border border-white/10 shadow-2xl">
+<div class="lg:w-1/2">
+<span class="text-[var(--accent)] font-display text-5xl font-bold mb-8 block">02</span>
+<h3 class="text-4xl lg:text-6xl font-display font-bold tracking-tighter uppercase mb-6">Serigrafía<br/>Textil Premium</h3>
+<p class="text-xl font-light mb-12 max-w-sm">Acabados vibrantes y duraderos. Ideal para grandes producciones y eventos corporativos.</p>
+<div class="flex items-center gap-6">
+<span class="text-2xl font-bold">Desde 70€</span>
+<button class="bg-primary text-white px-10 py-5 text-xs font-bold uppercase tracking-widest hover:bg-[var(--accent)] transition-colors">
+                            Reservar ahora
+                        </button>
+</div>
+</div>
+<div class="lg:w-1/2 h-[400px] overflow-hidden">
+<img alt="Serigrafía detalle" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtvBn2zvtWT0aEc7E5udulf2kGT4zXMB30zKfIeJjqaxZJqWeiIEgoDiV9Vv8bNnBoTzLhc7dCWScmGDU4CuOPwbt3zyKR1gZvBlbtVj77M2Q6yU31OfoCrJOQI8WGOzJzyrxoj9dvsFgOyshxasUOBwXiBN2le8xGF2xlq-1FIE6aCRFrL8mHZEG8rKRTmvJCJLQdrQJHlxzRo59JgRTgbfXMDJxfRTZfBOBWUJLifuie9qC1BYe7h6K3urJaiYF26tyXJlRXrQmW"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6 lg:px-12 bg-bg-main" id="portfolio">
+<div class="max-w-[1400px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<h2 class="text-6xl md:text-9xl font-display font-bold tracking-tighter uppercase leading-none">
+                Curated<br/>Works.
+            </h2>
+<p class="max-w-xs text-sm uppercase tracking-widest font-bold text-gray-400">
+                Una selección de proyectos donde la precisión se encuentra con el diseño contemporáneo.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 perspective-1000">
+<div class="tilt-hover group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-6 shadow-xl">
+<img alt="Work 1" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXQElJpoU-w6P2LL-TMjF243qGbuPCw1N0HCaVBMareqfOVg4jR7QZWdh042mwefdWGngxmwqOBb3y0MZncbsuXeurVmqYwTLdTZubSMz30F2JzCCalG3qTGqQVVw7tyXaQ1jMENSI2Cslnr9ng_s8Opwct_MLkQY2dXMZDcUyI-DGtMbN23KNX7oc0u646cjWpMp778spZXF6W4cxQY3H__L0MUDSKPxrwbmN41Q_BRae41beSeRYyDcEyzJAtIeZyDI9Mytxq_bW"/>
+</div>
+<div class="flex justify-between items-center uppercase tracking-widest text-[10px] font-bold">
+<span>Editorial Textiles</span>
+<span class="text-gray-400">2024</span>
+</div>
+</div>
+<div class="tilt-hover group cursor-pointer lg:mt-24">
+<div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-6 shadow-xl">
+<img alt="Work 2" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbC_Qhr6InXnInJvsu0s_UfLpeuVHOE-RzUcBF0dumvuMu8RCjO3c-im2zQiZ1rFZbnJOX98xIqQq33HHk2REM-WJrbrx8upQX-5vc1cxnoy6FW0cB2_Er6eyZn3_MJc_6Mr6fQlgCVb4h3pDUF4MzVNPU-AIhrbfYuMWDlgoQx4YzL4ZnSJcR4o4YnpYrWbCye0n1eyzRdeVH9EQknl6lSUIelBN25uAniCynD4u-r4vpHHYyiN6hQW8SX8t1GwZoORhPF9zMfTL0"/>
+</div>
+<div class="flex justify-between items-center uppercase tracking-widest text-[10px] font-bold">
+<span>Custom Patterns</span>
+<span class="text-gray-400">2024</span>
+</div>
+</div>
+<div class="tilt-hover group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-6 shadow-xl">
+<img alt="Work 3" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOgOJR0IsOHMZrjWk2UnRoG8dArNBsrdmEXpZHzu12okipz1IMI3Ye9vmRRQ3sDY5wUmbujBHGDVlHJ5kkFDhetIbGMqsE6DHDAWKtotwxGySntFTthrNsA2avpu5wf2322I6MjKQJXEJs2uOuKb29ewfilwoZ1bxgWo4KyFQ7zjUsYNFwnLmhWtK2kkrpKVRrubO3mvkSKFKnVoQK34qQLh3Rn0WPfcmZSMb1C9Jj3TpvpVOFIEnp7ORY00UtCqIGoVFloJk13Uw4"/>
+</div>
+<div class="flex justify-between items-center uppercase tracking-widest text-[10px] font-bold">
+<span>Studio Details</span>
+<span class="text-gray-400">2023</span>
+</div>
+</div>
+<div class="tilt-hover group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-6 shadow-xl">
+<img alt="Work 4" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhzJLIS6RF1LnVckZMHd1tmrgQIhqp-MjuuOwaSz3X6puGCSd5za5OUVssdWVlsZ1o-z2f_CXtCJFwtiKdz_Dd-LZwHzYNGTXH33f8Beslc9XsNxL0qNKJBWsbLNygTxyjLVXckYlOqNo01QKaZejmTydhFRQp-V-3vZwrs1QyaKdJlV4AsfVpCSNqLadg3MpLr_kJ-tz6JNts3GhAx6O5FIyV7SWCLkRvCqyF5MIKF3ocg46Xxqx63xvKX1ay84T4yIVQPqNpIvm5"/>
+</div>
+<div class="flex justify-between items-center uppercase tracking-widest text-[10px] font-bold">
+<span>Branding Embroidery</span>
+<span class="text-gray-400">2023</span>
+</div>
+</div>
+<div class="tilt-hover group cursor-pointer lg:mt-24">
+<div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-6 shadow-xl">
+<img alt="Work 5" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYb1AadFW_Rqv-TT17Ac2zGw9Zv_LR3vD5KmG1uv78c1a6ZmcKjhsnAUnG_FcY03mw6gOJwuH9TWofB1ymODDDFCcRlDgO84ZOIcfJrcNoBrFIyD91fSi33X2TgP5RABVK7k-jlBusUg_2LZiZwCbHOCJgfB-Vm4ABtaK8W6nkXTfSZgEVRcFVnKOj56On-_WYxvYogWnWj-nT5PkyUo6vB5m7tppvNUjRolsE5NfvHVDUlN9l879XdGGuC3wWSd4PdScSgHjfKDux"/>
+</div>
+<div class="flex justify-between items-center uppercase tracking-widest text-[10px] font-bold">
+<span>Macro Texture</span>
+<span class="text-gray-400">2023</span>
+</div>
+</div>
+<div class="tilt-hover group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-6 shadow-xl">
+<img alt="Work 6" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzwVzoqMd24RByJT0a55YSU8-Ya8IikYwyVg-Ix5SJKirVoVaJSylUQkm_za6MFPsxxFafofu0gDcN2V8FJ0haWmQyz8CuuS6eWOtsqz6gwPk9q4yxZ8mxUuqyrJpAsiL_WzhnzH0XOfo6vqdmeogPt3lvZ5lQBMYcoOdB21uLkyT6vGJ7T8ESCTH8jrHyLXy2OkR3g9Y9jjRRazFuNeMvX-Uz9hCgvfoYgWcIBqLT98mhp2yyCUaXSFYefuxp9TZQgitDfhbGtpgz"/>
+</div>
+<div class="flex justify-between items-center uppercase tracking-widest text-[10px] font-bold">
+<span>Industrial Flow</span>
+<span class="text-gray-400">2022</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-primary text-white pt-40 pb-12 px-6 lg:px-12" id="contacto">
+<div class="max-w-[1400px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-40">
+<div class="lg:col-span-6">
+<h4 class="text-xs font-bold uppercase tracking-widest mb-10 text-[var(--accent)]">Contacto</h4>
+<div class="space-y-4">
+<a class="text-4xl md:text-6xl font-display font-bold tracking-tighter hover:text-[var(--accent)] transition-colors block" href="mailto:info@bordadoslopez.com">info@bordadoslopez.com</a>
+<a class="text-4xl md:text-6xl font-display font-bold tracking-tighter hover:text-[var(--accent)] transition-colors block" href="tel:+34900000000">+34 33 123 456</a>
+</div>
+</div>
+<div class="lg:col-span-3">
+<h4 class="text-xs font-bold uppercase tracking-widest mb-10 text-[var(--accent)]">Ubicación</h4>
+<p class="text-xl font-light">Llano de Brujas,<br/>Murcia, España</p>
+</div>
+<div class="lg:col-span-3">
+<h4 class="text-xs font-bold uppercase tracking-widest mb-10 text-[var(--accent)]">Social</h4>
+<div class="flex flex-col space-y-4 text-xl font-light">
+<a class="hover:text-[var(--accent)] transition-colors" href="#">Instagram</a>
+<a class="hover:text-[var(--accent)] transition-colors" href="#">Behance</a>
+<a class="hover:text-[var(--accent)] transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<h2 class="text-[18vw] font-display font-bold leading-none tracking-tighter opacity-5 select-none">BORDADOS</h2>
+<div class="flex flex-col md:items-end gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500">
+<p>© 2024 Bordados López</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Privacidad</a>
+<a class="hover:text-white transition-colors" href="#">Términos</a>
+<a class="hover:text-white transition-colors" href="#top">Back to top</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Header shadow on scroll
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 100) {
+            nav.classList.add('bg-primary', 'py-4');
+            nav.classList.remove('py-8');
+        } else {
+            nav.classList.remove('bg-primary', 'py-4');
+            nav.classList.add('py-8');
+        }
+    });
+</script>
+
+</body></html>

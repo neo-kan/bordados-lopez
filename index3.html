@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bordados López - Split-Screen Experience</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0a0a2c",
+              accent: "#e0e0ff",
+              "background-light": "#ffffff",
+              "background-dark": "#050510",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "4px",
+            },
+          },
+        },
+      };
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --cursor-size: 20px;
+        }
+        body {
+            cursor: none;
+        }
+        #custom-cursor {
+            width: var(--cursor-size);
+            height: var(--cursor-size);
+            background: rgba(10, 10, 44, 0.3);
+            border: 1px solid rgba(10, 10, 44, 0.5);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.2s ease, background 0.3s ease, width 0.3s ease, height 0.3s ease;
+            transform: translate(-50%, -50%);
+        }
+        .interactive-hover:hover ~ #custom-cursor,
+        button:hover ~ #custom-cursor,
+        a:hover ~ #custom-cursor {
+            transform: translate(-50%, -50%) scale(3);
+            background: rgba(10, 10, 44, 0.1);
+            border-color: #0a0a2c;
+        }
+        .service-card:hover .service-bg-trigger {
+            opacity: 1;
+        }
+        .portfolio-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .portfolio-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .left-panel-bg {
+            transition: opacity 0.6s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-primary dark:text-gray-200 font-display transition-colors duration-300 overflow-hidden">
+<div class="hidden lg:block" id="custom-cursor"></div>
+<main class="flex h-screen overflow-hidden">
+<aside class="hidden lg:flex w-1/2 relative flex-col justify-between p-16 overflow-hidden bg-primary">
+<div class="left-panel-bg absolute inset-0 z-0 opacity-100" id="bg-default">
+<img alt="Default BG" class="w-full h-full object-cover opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo1rgy_Q2ldCfTpufbtHrYowc8ity81eblPP1g7vVz9UgDEJCACTC-rZtBpcKKAVxiw2Icz834iYb1uhw1AGbN3gttADJrjxejo6kCl0uFFGPPsLt9gYKsClP3ERfw4aw1VJlT_KS2Qgbwc-h5T47BjEyokRNcd2aVj0s0GxvhC_gfhdxfe4MSs72qtCzUhB8NqI3BjAkjQryr3F3IzRF7HtMxvWbZ-vLzcSTRQLb3o_v9t2NDOWQoiOPImr-7bB6vr4MhD7DeTw8i"/>
+</div>
+<div class="left-panel-bg absolute inset-0 z-0 opacity-0" id="bg-service-1">
+<img alt="Service 1 BG" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa9FIqMHbQAYhI4Y3IuDjWRD7CyhRUTUFMhzV1eXX2LEGR6y5daUT4OMKLIAqupuN-tPuv3KstBtSHzitaQjryzWQU_ZZ4q8ICmtAZrPBgW9Ev8ZoEzexzMwpWxOnGDRGjimiyZcPuU1aPspT3htUxHQ9yNQTwY4oK8OWolPgOjmGgOu73XgsRljtlY2ARSAlLmiJVsXuzg-ti7wJ5hcw1Puig6lVkLEvtjP6JgVsaCg_Yygr_V57TIOlPRIyLVAUwpsehBoYVjqVR"/>
+</div>
+<div class="left-panel-bg absolute inset-0 z-0 opacity-0" id="bg-service-2">
+<img alt="Service 2 BG" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtvBn2zvtWT0aEc7E5udulf2kGT4zXMB30zKfIeJjqaxZJqWeiIEgoDiV9Vv8bNnBoTzLhc7dCWScmGDU4CuOPwbt3zyKR1gZvBlbtVj77M2Q6yU31OfoCrJOQI8WGOzJzyrxoj9dvsFgOyshxasUOBwXiBN2le8xGF2xlq-1FIE6aCRFrL8mHZEG8rKRTmvJCJLQdrQJHlxzRo59JgRTgbfXMDJxfRTZfBOBWUJLifuie9qC1BYe7h6K3urJaiYF26tyXJlRXrQmW"/>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-4xl">grid_view</span>
+<span class="text-2xl font-semibold tracking-tighter uppercase">Bordados López</span>
+</div>
+</div>
+<div class="relative z-10">
+<nav class="flex flex-col space-y-6">
+<a class="text-white text-5xl font-light hover:pl-4 transition-all duration-300 tracking-tighter opacity-80 hover:opacity-100" href="#servicios-section">SERVICIOS</a>
+<a class="text-white text-5xl font-light hover:pl-4 transition-all duration-300 tracking-tighter opacity-80 hover:opacity-100" href="#portfolio-section">PORTAFOLIO</a>
+<a class="text-white text-5xl font-light hover:pl-4 transition-all duration-300 tracking-tighter opacity-80 hover:opacity-100" href="#contacto-section">CONTACTO</a>
+</nav>
+</div>
+<div class="relative z-10 flex justify-between items-end">
+<p class="text-white/60 text-sm max-w-xs uppercase tracking-widest leading-relaxed">
+                    Personalización textil premium <br/> Murcia, España.
+                </p>
+<button class="p-4 rounded-full border border-white/20 text-white hover:bg-white hover:text-primary transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+</div>
+</aside>
+<section class="w-full lg:w-1/2 h-full overflow-y-auto scroll-smooth bg-white dark:bg-background-dark">
+<nav class="lg:hidden sticky top-0 z-50 bg-white/80 backdrop-blur-md px-6 py-4 flex justify-between items-center border-b">
+<span class="font-bold uppercase tracking-widest">Bordados López</span>
+<span class="material-symbols-outlined">menu</span>
+</nav>
+<div class="p-8 lg:p-24 pt-32 lg:pt-48">
+<h1 class="text-6xl lg:text-8xl font-light tracking-tighter leading-[0.9] mb-12">
+                    CALIDAD EN CADA PUNTADA.
+                </h1>
+<p class="text-xl text-gray-500 font-light mb-16 max-w-lg leading-relaxed">
+                    Transformamos tus ideas en piezas textiles únicas. Desde bordado industrial hasta serigrafía de alta definición.
+                </p>
+</div>
+<div class="px-8 lg:px-24 py-20 space-y-32" id="servicios-section">
+<h2 class="text-xs uppercase tracking-[0.3em] font-bold text-gray-400 mb-12">NUESTROS SERVICIOS</h2>
+<div class="service-card group cursor-none" onmouseenter="document.getElementById('bg-service-1').style.opacity = '1'; document.getElementById('bg-default').style.opacity = '0';" onmouseleave="document.getElementById('bg-service-1').style.opacity = '0'; document.getElementById('bg-default').style.opacity = '1';">
+<div class="aspect-[16/10] overflow-hidden mb-8">
+<img alt="Bordado Personalizado" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa9FIqMHbQAYhI4Y3IuDjWRD7CyhRUTUFMhzV1eXX2LEGR6y5daUT4OMKLIAqupuN-tPuv3KstBtSHzitaQjryzWQU_ZZ4q8ICmtAZrPBgW9Ev8ZoEzexzMwpWxOnGDRGjimiyZcPuU1aPspT3htUxHQ9yNQTwY4oK8OWolPgOjmGgOu73XgsRljtlY2ARSAlLmiJVsXuzg-ti7wJ5hcw1Puig6lVkLEvtjP6JgVsaCg_Yygr_V57TIOlPRIyLVAUwpsehBoYVjqVR"/>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<h3 class="text-3xl font-light tracking-tight mb-2">Bordado Personalizado</h3>
+<p class="text-gray-400 uppercase text-xs tracking-widest">Desde 50 € • Calidad Premium</p>
+</div>
+<button class="bg-primary text-white px-8 py-4 text-xs uppercase tracking-[0.2em] hover:bg-gray-800 transition-colors">
+                            Reservar ahora
+                        </button>
+</div>
+</div>
+<div class="service-card group cursor-none" onmouseenter="document.getElementById('bg-service-2').style.opacity = '1'; document.getElementById('bg-default').style.opacity = '0';" onmouseleave="document.getElementById('bg-service-2').style.opacity = '0'; document.getElementById('bg-default').style.opacity = '1';">
+<div class="aspect-[16/10] overflow-hidden mb-8">
+<img alt="Serigrafía Textil" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtvBn2zvtWT0aEc7E5udulf2kGT4zXMB30zKfIeJjqaxZJqWeiIEgoDiV9Vv8bNnBoTzLhc7dCWScmGDU4CuOPwbt3zyKR1gZvBlbtVj77M2Q6yU31OfoCrJOQI8WGOzJzyrxoj9dvsFgOyshxasUOBwXiBN2le8xGF2xlq-1FIE6aCRFrL8mHZEG8rKRTmvJCJLQdrQJHlxzRo59JgRTgbfXMDJxfRTZfBOBWUJLifuie9qC1BYe7h6K3urJaiYF26tyXJlRXrQmW"/>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<h3 class="text-3xl font-light tracking-tight mb-2">Serigrafía Textil</h3>
+<p class="text-gray-400 uppercase text-xs tracking-widest">Desde 70 € • Gran Formato</p>
+</div>
+<button class="bg-primary text-white px-8 py-4 text-xs uppercase tracking-[0.2em] hover:bg-gray-800 transition-colors">
+                            Reservar ahora
+                        </button>
+</div>
+</div>
+</div>
+<div class="py-20 bg-gray-50 dark:bg-gray-900/20" id="portfolio-section">
+<div class="px-8 lg:px-24 mb-12 flex justify-between items-end">
+<h2 class="text-xs uppercase tracking-[0.3em] font-bold text-gray-400">PORTAFOLIO RECIENTE</h2>
+<span class="text-xs text-gray-400 uppercase tracking-widest">Desliza para ver más →</span>
+</div>
+<div class="portfolio-scroll flex overflow-x-auto space-x-6 px-8 lg:px-24 pb-8">
+<div class="min-w-[300px] lg:min-w-[450px] aspect-[4/5] bg-gray-200">
+<img alt="Portfolio 1" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXQElJpoU-w6P2LL-TMjF243qGbuPCw1N0HCaVBMareqfOVg4jR7QZWdh042mwefdWGngxmwqOBb3y0MZncbsuXeurVmqYwTLdTZubSMz30F2JzCCalG3qTGqQVVw7tyXaQ1jMENSI2Cslnr9ng_s8Opwct_MLkQY2dXMZDcUyI-DGtMbN23KNX7oc0u646cjWpMp778spZXF6W4cxQY3H__L0MUDSKPxrwbmN41Q_BRae41beSeRYyDcEyzJAtIeZyDI9Mytxq_bW"/>
+</div>
+<div class="min-w-[300px] lg:min-w-[450px] aspect-[4/5] bg-gray-200">
+<img alt="Portfolio 2" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbC_Qhr6InXnInJvsu0s_UfLpeuVHOE-RzUcBF0dumvuMu8RCjO3c-im2zQiZ1rFZbnJOX98xIqQq33HHk2REM-WJrbrx8upQX-5vc1cxnoy6FW0cB2_Er6eyZn3_MJc_6Mr6fQlgCVb4h3pDUF4MzVNPU-AIhrbfYuMWDlgoQx4YzL4ZnSJcR4o4YnpYrWbCye0n1eyzRdeVH9EQknl6lSUIelBN25uAniCynD4u-r4vpHHYyiN6hQW8SX8t1GwZoORhPF9zMfTL0"/>
+</div>
+<div class="min-w-[300px] lg:min-w-[450px] aspect-[4/5] bg-gray-200">
+<img alt="Portfolio 3" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOgOJR0IsOHMZrjWk2UnRoG8dArNBsrdmEXpZHzu12okipz1IMI3Ye9vmRRQ3sDY5wUmbujBHGDVlHJ5kkFDhetIbGMqsE6DHDAWKtotwxGySntFTthrNsA2avpu5wf2322I6MjKQJXEJs2uOuKb29ewfilwoZ1bxgWo4KyFQ7zjUsYNFwnLmhWtK2kkrpKVRrubO3mvkSKFKnVoQK34qQLh3Rn0WPfcmZSMb1C9Jj3TpvpVOFIEnp7ORY00UtCqIGoVFloJk13Uw4"/>
+</div>
+<div class="min-w-[300px] lg:min-w-[450px] aspect-[4/5] bg-gray-200">
+<img alt="Portfolio 4" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhzJLIS6RF1LnVckZMHd1tmrgQIhqp-MjuuOwaSz3X6puGCSd5za5OUVssdWVlsZ1o-z2f_CXtCJFwtiKdz_Dd-LZwHzYNGTXH33f8Beslc9XsNxL0qNKJBWsbLNygTxyjLVXckYlOqNo01QKaZejmTydhFRQp-V-3vZwrs1QyaKdJlV4AsfVpCSNqLadg3MpLr_kJ-tz6JNts3GhAx6O5FIyV7SWCLkRvCqyF5MIKF3ocg46Xxqx63xvKX1ay84T4yIVQPqNpIvm5"/>
+</div>
+<div class="min-w-[300px] lg:min-w-[450px] aspect-[4/5] bg-gray-200">
+<img alt="Portfolio 5" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYb1AadFW_Rqv-TT17Ac2zGw9Zv_LR3vD5KmG1uv78c1a6ZmcKjhsnAUnG_FcY03mw6gOJwuH9TWofB1ymODDDFCcRlDgO84ZOIcfJrcNoBrFIyD91fSi33X2TgP5RABVK7k-jlBusUg_2LZiZwCbHOCJgfB-Vm4ABtaK8W6nkXTfSZgEVRcFVnKOj56On-_WYxvYogWnWj-nT5PkyUo6vB5m7tppvNUjRolsE5NfvHVDUlN9l879XdGGuC3wWSd4PdScSgHjfKDux"/>
+</div>
+</div>
+</div>
+<div class="p-8 lg:p-24 pb-12" id="contacto-section">
+<div class="border-t border-gray-100 dark:border-gray-800 pt-20">
+<h2 class="text-5xl lg:text-7xl font-light tracking-tighter mb-20">HABLEMOS DE<br/>TU PROYECTO</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-32">
+<div>
+<h4 class="text-xs uppercase tracking-widest font-bold mb-6 text-gray-400">CONTACTO</h4>
+<p class="text-2xl font-light mb-2">info@bordadoslopez.com</p>
+<p class="text-2xl font-light">+52 33 1234 5678</p>
+</div>
+<div>
+<h4 class="text-xs uppercase tracking-widest font-bold mb-6 text-gray-400">UBICACIÓN</h4>
+<p class="text-lg text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+                                Llano de Brujas, Murcia, España
+                            </p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.2em] text-gray-400 pt-12 border-t border-gray-100 dark:border-gray-800">
+<p>© 2024 Bordados López. All Rights Reserved.</p>
+<div class="mt-4 md:mt-0 space-x-8">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Facebook</a>
+<a class="hover:text-primary transition-colors" href="#">Legal</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script>
+        const cursor = document.getElementById('custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.querySelectorAll('a, button, .service-card').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(3.5)';
+                cursor.style.backgroundColor = 'rgba(10, 10, 44, 0.05)';
+                cursor.style.borderColor = '#0a0a2c';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.backgroundColor = 'rgba(10, 10, 44, 0.3)';
+                cursor.style.borderColor = 'rgba(10, 10, 44, 0.5)';
+            });
+        });
+    </script>
+
+</body></html>
